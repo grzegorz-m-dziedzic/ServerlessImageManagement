@@ -1,0 +1,53 @@
+﻿{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "Proxy for index": {
+      "matchCondition": {
+        "route": "/"
+      },
+      "backendUri": "https://myphotostorage.blob.core.windows.net/frontend/dist/index.html"
+    },
+    "Proxy for paths": {
+      "matchCondition": {
+        "route": "/{*path}"
+      },
+      "backendUri": "https://myphotostorage.blob.core.windows.net/frontend/dist/{path}"
+    },
+    "Proxy GetAllContainerElements": {
+      "matchCondition": {
+        "route": "/api/GetAllContainerElements"
+      },
+      "backendUri": "https://grzegorztestuje.azurewebsites.net/api/GetAllContainerElements"
+    },
+    "Proxy DeleteElement": {
+      "matchCondition": {
+        "route": "/api/DeleteElement"
+      },
+      "backendUri": "https://grzegorztestuje.azurewebsites.net/api/DeleteElement"
+    },
+    "Proxy GetImage": {
+      "matchCondition": {
+        "route": "/api/GetImage"
+      },
+      "backendUri": "https://grzegorztestuje.azurewebsites.net/api/GetImage"
+    },
+    "Proxy GetImageThumbnail": {
+      "matchCondition": {
+        "route": "/api/GetImageThumbnail"
+      },
+      "backendUri": "https://grzegorztestuje.azurewebsites.net/api/GetImageThumbnail"
+    },
+    "Proxy RenameElement": {
+      "matchCondition": {
+        "route": "/api/RenameElement"
+      },
+      "backendUri": "https://grzegorztestuje.azurewebsites.net/api/RenameElement"
+    },
+    "Proxy UploadImage": {
+      "matchCondition": {
+        "route": "/api/UploadImage/{path}"
+      },
+      "backendUri": "https://faceaggregator.azurewebsites.net/api/UploadImage/{path}"
+    }
+  }
+}
